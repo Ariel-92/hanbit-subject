@@ -8,6 +8,7 @@ export type ProductInfo = {
   salePrice: number
   saleRate: number
   lecturer: LecturerInfo
+  playList: PlayList[]
 }
 
 export type LecturerInfo = {
@@ -15,4 +16,11 @@ export type LecturerInfo = {
   desc: string
   career?: string[]
   books?: string[]
+}
+
+export type PlayList = {
+  title: string
+  url: string
+  hasPreview: boolean
+  playTime: string
 }

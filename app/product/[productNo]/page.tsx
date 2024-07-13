@@ -22,7 +22,21 @@ export default function ProductDetailPage({ params }: ProductDetailProps) {
       desc: '강사 소개 \n 강사 소개2',
       career: ['경력1', '경력2'],
       books: ['저서1', '저서2']
-    }
+    },
+    playList: [
+      {
+        title: '강의 1',
+        url: 'https://www.hanbitn.com/lessons/aa24050007_03/',
+        hasPreview: true,
+        playTime: '10:00'
+      },
+      {
+        title: '강의 2',
+        url: 'https://www.youtube.com/watch?v=2',
+        hasPreview: false,
+        playTime: '10:00'
+      }
+    ]
   }
 
   return <>
