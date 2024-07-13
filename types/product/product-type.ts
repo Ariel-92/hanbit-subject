@@ -7,4 +7,12 @@ export type ProductInfo = {
   norPrice: number
   salePrice: number
   saleRate: number
+  lecturer: LecturerInfo
+}
+
+export type LecturerInfo = {
+  lecturerNm: string
+  desc: string
+  career?: string[]
+  books?: string[]
 }
