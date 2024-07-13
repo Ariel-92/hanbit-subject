@@ -1,4 +1,5 @@
 import { LecturerInfo } from "@/types/product/product-type"
+import InfoList from "@/components/common/info-list"
 
 interface ProductDetailLecturerInfoProps {
   lecturerInfo: LecturerInfo
@@ -16,21 +17,13 @@ export default function ProductDetailLecturerInfo({ lecturerInfo }: ProductDetai
         {lecturerInfo.career && (
           <div className="p-2.5 w-1/2">
             <h3 className="text-xl">경력</h3>
-            <ul>
-              {lecturerInfo.career.map((career) => (
-                <li key={career}>{career}</li>
-              ))}
-            </ul>
+            <InfoList info={lecturerInfo.career} />
           </div>
         )}
         {lecturerInfo.books && (
           <div className="p-2.5 w-1/2">
             <h3 className="text-xl">저서</h3>
-            <ul>
-              {lecturerInfo.books.map((book) => (
-                <li key={book}>{book}</li>
-              ))}
-            </ul>
+            <InfoList info={lecturerInfo.books} />
           </div>
         )}
       </div>
