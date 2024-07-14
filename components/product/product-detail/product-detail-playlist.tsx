@@ -1,5 +1,7 @@
 import { PlayList } from "@/types/product/product-type"
 import H from "@/components/common/h"
+import P from "@/components/common/p"
+import Link from "next/link"
 
 interface ProductDetailPlaylistProps {
   playlist: PlayList[]
@@ -19,9 +21,9 @@ export default function ProductDetailPlaylist({ playlist }: ProductDetailPlaylis
                   className="before:bg-[url('/icons/icon_play_button.svg')] before:block before:w-4 before:h-4 before:bg-cover" />
               </td>
               <td className="py-3 pl-7 pr-4 w-full">
-                {item.hasPreview ? <a href={item.url}>{item.title + "[미리보기]"}</a> : <span>{item.title}</span>}
+                {item.hasPreview ? <Link className="text-[#00b3a3]" href={item.url}>{item.title + "[미리보기]"}</Link> : <P>{item.title}</P>}
               </td>
-              <td className="py-3 px-4 w-24">{item.playTime}</td>
+              <td className="py-3 px-4 w-24"><P>{item.playTime}</P></td>
             </tr>
           ))}
           </tbody>

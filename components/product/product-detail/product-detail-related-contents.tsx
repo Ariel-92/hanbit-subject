@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { RelatedContents } from "@/types/product/product-type"
 import H from "@/components/common/h"
+import P from "@/components/common/p"
 
 interface ProductDetailRelatedContentsProps {
   relatedContents: RelatedContents[]
@@ -19,9 +20,9 @@ export default function ProductDetailRelatedContents({ relatedContents }: Produc
                 <Image className="mb-4" src={content.imgPath} alt={content.title} width={320} height={480} />
               </Link>
               <h3 className="text-lg mb-1 mx-auto w-fit">{content.title}</h3>
-              <p className="mx-auto w-fit">
+              <P className="mx-auto w-fit">
                 {content.author} | {content.publisher} | {content.year}
-              </p>
+              </P>
             </div>
           ))}
       </div>

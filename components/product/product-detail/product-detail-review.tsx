@@ -2,6 +2,7 @@ import { Review } from "@/types/product/product-type"
 import Stars from "@/components/common/stars"
 import { TextareaAutosize } from "@mui/base"
 import H from "@/components/common/h"
+import P from "@/components/common/p"
 
 interface ProductDetailReviewProps {
   reviews: Review[]
@@ -17,8 +18,8 @@ export default function ProductDetailReview({ reviews }: ProductDetailReviewProp
             <div className="w-28 my-auto">{review.reviewWriter}</div>
             <div className="w-full ml-7">
               <div><Stars rate={review.reviewRate } /></div>
-              <div>{review.reviewContent}</div>
-              <div>{review.reviewDate}</div>
+              <P>{review.reviewContent}</P>
+              <P>{review.reviewDate}</P>
             </div>
           </div>
         ))}

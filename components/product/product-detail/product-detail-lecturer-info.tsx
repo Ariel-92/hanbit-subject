@@ -13,7 +13,7 @@ export default function ProductDetailLecturerInfo({ lecturerInfo }: ProductDetai
       <div className="border rounded-2xl p-3 border-[#c6d0e9]">
         <div className="mb-7">
           <H as="h3" className="border-b mb-3 pb-3 border-[#c6d0e9]">{lecturerInfo.lecturerNm}</H>
-          <pre>{lecturerInfo.desc}</pre>
+          <pre className="font-normal text-text">{lecturerInfo.desc}</pre>
         </div>
         <div className="flex w-full">
           {lecturerInfo.career && (
