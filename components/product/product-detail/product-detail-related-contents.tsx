@@ -16,8 +16,8 @@ export default function ProductDetailRelatedContents({ relatedContents }: Produc
       </H>
       <div className="grid grid-cols-1 md:grid-cols-2">
         {relatedContents &&
-          relatedContents.map((content) => (
-            <div key={content.url} className="max-w-80 mx-auto mb-4">
+          relatedContents.map((content, index) => (
+            <div key={content.url + index} className="max-w-80 mx-auto mb-4">
               <Link href={content.url}>
                 <Image className="mb-4" src={content.imgPath} alt={content.title} width={320} height={480} />
               </Link>

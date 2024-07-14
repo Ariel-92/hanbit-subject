@@ -12,9 +12,10 @@ import type { ProductInfo } from "@/types/product/product-type"
 
 interface ProductDetailContentsTabProps {
   productData: ProductInfo
+  className?: string
 }
 
-export default function ProductDetailContentsTab({ productData }: ProductDetailContentsTabProps) {
+export default function ProductDetailContentsTab({ productData, className }: ProductDetailContentsTabProps) {
   const [currentTab, setCurrentTab] = useState(0)
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
@@ -22,7 +23,7 @@ export default function ProductDetailContentsTab({ productData }: ProductDetailC
   }
 
   return (
-    <>
+    <div className={className}>
       <AppBar className="border-0 shadow-none" position="sticky" color="inherit">
         <Tabs value={currentTab} onChange={handleChange} className="border-b">
           <Tab label="소개" />
@@ -44,7 +45,7 @@ export default function ProductDetailContentsTab({ productData }: ProductDetailC
           <ProductDetailReview reviews={productData.reviews} />
         </TabPanel>
       </div>
-    </>
+    </div>
   )
 }
 

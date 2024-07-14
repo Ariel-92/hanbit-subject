@@ -102,7 +102,17 @@ export default function ProductDetailPage({ params }: ProductDetailProps) {
         reviewRate: 3,
         reviewDate: "2024-01-05",
       }
-    ]
+    ],
+    purchaseInfo: {
+      salePrice: 8000,
+      norPrice: 10000,
+      category: "카테고리",
+      author: "강사 1",
+      totalPlayTerm: 10,
+      totalPlayTime: "3시간 4분",
+      storagePeriod: "제한없음",
+      recommendPeriod: "30일"
+    }
   }
 
   return (
