@@ -83,7 +83,6 @@ export default function ProductDetailPage({ params }: ProductDetailProps) {
 
   return (
     <>
-      {params.productNo}
       <ProductDetail productData={productData} />
     </>
   )
