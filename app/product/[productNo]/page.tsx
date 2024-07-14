@@ -63,6 +63,22 @@ export default function ProductDetailPage({ params }: ProductDetailProps) {
         year: "2021",
       },
     ],
+    reviews: [
+      {
+        reviewNo: "1",
+        reviewWriter: "리뷰어 1",
+        reviewContent: "리뷰 내용 1",
+        reviewRate: 5,
+        reviewDate: "2024-01-05",
+      },
+      {
+        reviewNo: "2",
+        reviewWriter: "리뷰어 2",
+        reviewContent: "리뷰 내용 12dsfiaK",
+        reviewRate: 3,
+        reviewDate: "2024-01-05",
+      }
+    ]
   }
 
   return (
