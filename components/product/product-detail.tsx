@@ -6,6 +6,7 @@ import ProductDetailPlaylist from "@/components/product/product-detail/product-d
 import ProductDetailRelatedContents from "@/components/product/product-detail/product-detail-related-contents"
 import ProductDetailReview from "@/components/product/product-detail/product-detail-review"
 import ProductDetailRefundPolicy from "@/components/product/product-detail/product-detail-refund-policy"
+import ProductDetailContentsTab from "@/components/product/product-detail/product-detail-contents-tab"
 
 interface ProductDetailProps {
   productData: ProductInfo
@@ -16,12 +17,7 @@ export default function ProductDetail({ productData }: ProductDetailProps) {
     <>
       <ProductDetailBasicInfo productNm={productData.productNm} tags={productData.tags} imgPath={productData.imgPath} />
       <div className="max-w-[1140px] mx-auto">
-        <ProductDetailDesc className="mb-6" productDesc={productData.desc} />
-        <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
-        <ProductDetailPlaylist playlist={productData.playList} />
-        <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
-        <ProductDetailReview reviews={productData.reviews} />
-        <ProductDetailRefundPolicy />
+        <ProductDetailContentsTab productData={productData} />
       </div>
     </>
   )
