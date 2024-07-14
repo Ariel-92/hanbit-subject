@@ -1,6 +1,7 @@
 import { Review } from "@/types/product/product-type"
 import Stars from "@/components/common/stars"
 import { TextareaAutosize } from "@mui/base"
+import H from "@/components/common/h"
 
 interface ProductDetailReviewProps {
   reviews: Review[]
@@ -9,7 +10,7 @@ interface ProductDetailReviewProps {
 export default function ProductDetailReview({ reviews }: ProductDetailReviewProps){
   return (
     <div className="mb-10">
-      <h2 className="text-2xl my-4">리뷰</h2>
+      <H as="h2" className="my-4">리뷰</H>
       <div className="border-t-2 border-b-2 border-[#EEEEEE] pb-4 mb-4">
         {reviews.map((review) => (
           <div key={review.reviewNo} className="flex w-full px-7 pt-7">

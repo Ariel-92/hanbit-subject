@@ -3,6 +3,7 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material"
 import { ArrowDropDown } from "@mui/icons-material"
 import { useState } from "react"
+import H from "@/components/common/h"
 
 export default function ProductDetailRefundPolicy() {
   const [opened, setOpened] = useState(1);
@@ -18,11 +19,11 @@ export default function ProductDetailRefundPolicy() {
 
   return(
     <div className="mb-7">
-      <h2>환불 정책</h2>
-      <p>한빛앤은 평생교육법에 의거 원격평생교육시설로 운영되고 있으며, 다음과 같이 환불이 가능합니다.</p>
+      <H as="h2" className="mb-4">환불 정책</H>
+      <p className="mb-4">한빛앤은 평생교육법에 의거 원격평생교육시설로 운영되고 있으며, 다음과 같이 환불이 가능합니다.</p>
       <Accordion expanded={opened === 1} onClick={() => handleOpenAccordion(1)}>
         <AccordionSummary expandIcon={(<ArrowDropDown />)}>
-          <h3>1. 콘텐츠 이용기간</h3>
+          <H as="h3">1. 콘텐츠 이용기간</H>
         </AccordionSummary>
         <AccordionDetails>
           <p>{'환불을 요청하기 위해서는 <이용 권장 기간> 이내에 요청하셔야 합니다.'}</p>
@@ -31,7 +32,7 @@ export default function ProductDetailRefundPolicy() {
       </Accordion>
       <Accordion expanded={opened === 2} onClick={() => handleOpenAccordion(2)} >
         <AccordionSummary expandIcon={(<ArrowDropDown />)}>
-          <h3>2. 환불 기준</h3>
+          <H as="h3">2. 환불 기준</H>
         </AccordionSummary>
         <AccordionDetails>
           <p>2-1. 전액 환불</p>
@@ -48,7 +49,7 @@ export default function ProductDetailRefundPolicy() {
       </Accordion>
       <Accordion expanded={opened === 3} onClick={() => handleOpenAccordion(3)}>
         <AccordionSummary expandIcon={(<ArrowDropDown />)}>
-          <h3>3. 환불절차</h3>
+          <H as="h3">3. 환불절차</H>
         </AccordionSummary>
         <AccordionDetails>
           <p>환불은 일대일 문의를 통해 진행됩니다. 환불을 원하는 콘텐츠 정보(구매일자, 구매 콘텐츠명, 주문번호 등)를 일대일 문의를 통해 전달해주시면, 담당자가 콘텐츠 이용 여부, 콘텐츠 이용 권장 잔여 기간 등을 확인한 후 환불을 진행해드립니다.</p>
@@ -58,7 +59,7 @@ export default function ProductDetailRefundPolicy() {
       </Accordion>
       <Accordion expanded={opened === 4} onClick={() => handleOpenAccordion(4)}>
         <AccordionSummary expandIcon={(<ArrowDropDown />)}>
-          <h3>4. 유의사항</h3>
+          <H as="h3">4. 유의사항</H>
         </AccordionSummary>
         <AccordionDetails>
           <p>콘텐츠 이용 권장 기간은 콘텐츠 구매 시점부터 시작됩니다.</p>

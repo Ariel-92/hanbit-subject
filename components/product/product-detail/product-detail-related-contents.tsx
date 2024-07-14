@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { RelatedContents } from "@/types/product/product-type"
+import H from "@/components/common/h"
 
 interface ProductDetailRelatedContentsProps {
   relatedContents: RelatedContents[]
@@ -9,7 +10,7 @@ interface ProductDetailRelatedContentsProps {
 export default function ProductDetailRelatedContents({ relatedContents }: ProductDetailRelatedContentsProps) {
   return (
     <div>
-      <h2 className="text-2xl mb-4">함께 보면 좋아요</h2>
+      <H as="h2" className="mb-4">함께 보면 좋아요</H>
       <div className="grid grid-cols-2">
         {relatedContents &&
           relatedContents.map((content) => (
