@@ -10,13 +10,13 @@ interface ProductDetailBasicInfoProps {
 
 export default function ProductDetailBasicInfo({ productNm, tags, imgPath }: ProductDetailBasicInfoProps) {
   return (
-    <div className="bg-[#D8E6DE] w-full h-40 flex items-center">
-      <div className="flex w-full mx-20">
+    <div className="bg-[#D8E6DE] w-full h-[200px] flex items-center">
+      <div className="flex w-full max-w-[1055px] mx-5 md:mx-auto">
         <div className="w-[100%] flex flex-col justify-center">
           <H as="h1" className="mb-5">{productNm}</H>
           <TagList tags={tags} />
         </div>
-        <Image className="rounded-xl max-h-32 max-w-60" src={imgPath} alt={productNm} width={600} height={338} />
+        <Image className="rounded-xl max-h-[180px] max-w-[300px] hidden md:block" src={imgPath} alt={productNm} width={600} height={338} />
       </div>
     </div>
   )
