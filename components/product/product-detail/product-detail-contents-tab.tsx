@@ -31,7 +31,7 @@ export default function ProductDetailContentsTab({ productData }: ProductDetailC
         </Tabs>
       </AppBar>
       <TabPanel value={currentTab} index={0}>
-        <ProductDetailDesc className="mt-4 mb-6" productDesc={productData.desc} />
+        <ProductDetailDesc className="mt-4 mb-16" productDesc={productData.desc} />
         <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
         <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
         <ProductDetailRefundPolicy />

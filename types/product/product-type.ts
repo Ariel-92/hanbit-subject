@@ -3,7 +3,7 @@ export type ProductInfo = {
   productNm: string
   tags: string[]
   imgPath: string
-  desc: string
+  desc: ProductDescription
   norPrice: number
   salePrice: number
   saleRate: number
@@ -42,4 +42,13 @@ export type Review = {
   reviewContent: string
   reviewRate: number
   reviewDate: string
+}
+
+export type ProductDescription = {
+  title: string
+  subTitle: string
+  description: string
+  whatToLearn: string
+  WhoFor: string
+  afterClass: string
 }
