@@ -1,6 +1,6 @@
 "use client"
 
-import { Tab, Tabs } from "@mui/material"
+import { AppBar, Tab, Tabs } from "@mui/material"
 import { SyntheticEvent, useRef, useState } from "react"
 import ProductDetailDesc from "@/components/product/product-detail/product-detail-desc"
 import ProductDetailLecturerInfo from "@/components/product/product-detail/product-detail-lecturer-info"
@@ -23,11 +23,13 @@ export default function ProductDetailContentsTab({ productData }: ProductDetailC
 
   return (
     <>
-      <Tabs value={currentTab} onChange={handleChange} className="border-b">
-        <Tab label="소개" />
-        <Tab label="목차" />
-        <Tab label="리뷰" />
-      </Tabs>
+      <AppBar className="border-0 shadow-none" position="sticky" color="inherit">
+        <Tabs value={currentTab} onChange={handleChange} className="border-b">
+          <Tab label="소개" />
+          <Tab label="목차" />
+          <Tab label="리뷰" />
+        </Tabs>
+      </AppBar>
       <TabPanel value={currentTab} index={0}>
         <ProductDetailDesc className="mt-4 mb-6" productDesc={productData.desc} />
         <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
