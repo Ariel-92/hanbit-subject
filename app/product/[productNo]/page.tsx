@@ -9,38 +9,66 @@ interface ProductDetailProps {
 
 export default function ProductDetailPage({ params }: ProductDetailProps) {
   const productData: ProductInfo = {
-    productNo: '1',
-    productNm: '강의 1',
-    tags: ['Java Script', 'Apple'],
-    imgPath: 'https://www.hanbitn.com/wp-content/uploads/aa24050004.png',
-    desc: 'description',
+    productNo: "1",
+    productNm: "강의 1",
+    tags: ["Java Script", "Apple"],
+    imgPath: "https://www.hanbitn.com/wp-content/uploads/aa24050004.png",
+    desc: "description",
     norPrice: 10000,
     salePrice: 8000,
     saleRate: 20,
     lecturer: {
-      lecturerNm: '강사 1',
-      desc: '강사 소개 \n 강사 소개2',
-      career: ['경력1', '경력2'],
-      books: ['저서1', '저서2']
+      lecturerNm: "강사 1",
+      desc: "강사 소개 \n 강사 소개2",
+      career: ["경력1", "경력2"],
+      books: ["저서1", "저서2"],
     },
     playList: [
       {
-        title: '강의 1',
-        url: 'https://www.hanbitn.com/lessons/aa24050007_03/',
+        title: "강의 1",
+        url: "https://www.hanbitn.com/lessons/aa24050007_03/",
         hasPreview: true,
-        playTime: '10:00'
+        playTime: "10:00",
       },
       {
-        title: '강의 2',
-        url: 'https://www.youtube.com/watch?v=2',
+        title: "강의 2",
+        url: "https://www.youtube.com/watch?v=2",
         hasPreview: false,
-        playTime: '10:00'
-      }
-    ]
+        playTime: "10:00",
+      },
+    ],
+    relatedContents: [
+      {
+        title: "처음 배우는 셸 스크립트",
+        url: "https://hanbit.co.kr/store/books/look.php?p_code=B9171469683%20",
+        imgPath: "https://www.hanbit.co.kr/data/books/B9171469683_l.jpg",
+        author: "장현정",
+        publisher: "한빛미디어",
+        year: "2021",
+      },
+      {
+        title: "처음 배우는 셸 스크립트",
+        url: "https://hanbit.co.kr/store/books/look.php?p_code=B9171469683%20",
+        imgPath: "https://www.hanbit.co.kr/data/books/B9171469683_l.jpg",
+        author: "장현정",
+        publisher: "한빛미디어",
+        year: "2021",
+      },
+      {
+        title: "처음 배우는 셸 스크립트",
+        url: "https://hanbit.co.kr/store/books/look.php?p_code=B9171469683%20",
+        imgPath: "https://www.hanbit.co.kr/data/books/B9171469683_l.jpg",
+        author: "장현정",
+        publisher: "한빛미디어",
+        year: "2021",
+      },
+    ],
   }
 
-  return <>
-    {params.productNo}
-    <ProductDetail productData={productData} />
-  </>
+  return (
+    <>
+      {params.productNo}
+      <ProductDetail productData={productData} />
+    </>
+  )
 }

@@ -3,6 +3,7 @@ import ProductDetailBasicInfo from "@/components/product/product-detail/product-
 import ProductDetailDesc from "@/components/product/product-detail/product-detail-desc"
 import ProductDetailLecturerInfo from "@/components/product/product-detail/product-detail-lecturer-info"
 import ProductDetailPlaylist from "@/components/product/product-detail/product-detail-playlist"
+import ProductDetailRelatedContents from "@/components/product/product-detail/product-detail-related-contents"
 
 interface ProductDetailProps {
   productData: ProductInfo
@@ -16,6 +17,7 @@ export default function ProductDetail({ productData }: ProductDetailProps) {
         <ProductDetailDesc className="mb-6" productDesc={productData.desc} />
         <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
         <ProductDetailPlaylist playlist={productData.playList} />
+        <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
       </div>
     </>
   )
