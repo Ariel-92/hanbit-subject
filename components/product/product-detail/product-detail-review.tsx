@@ -9,7 +9,7 @@ interface ProductDetailReviewProps {
 export default function ProductDetailReview({ reviews }: ProductDetailReviewProps){
   return (
     <div className="mb-10">
-      <h2 className="text-2xl mb-4">리뷰</h2>
+      <h2 className="text-2xl my-4">리뷰</h2>
       <div className="border-t-2 border-b-2 border-[#EEEEEE] pb-4 mb-4">
         {reviews.map((review) => (
           <div key={review.reviewNo} className="flex w-full px-7 pt-7">

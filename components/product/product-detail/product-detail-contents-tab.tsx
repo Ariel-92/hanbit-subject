@@ -29,7 +29,7 @@ export default function ProductDetailContentsTab({ productData }: ProductDetailC
         <Tab label="리뷰" />
       </Tabs>
       <TabPanel value={currentTab} index={0}>
-        <ProductDetailDesc className="mb-6" productDesc={productData.desc} />
+        <ProductDetailDesc className="mt-4 mb-6" productDesc={productData.desc} />
         <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
         <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
         <ProductDetailRefundPolicy />
