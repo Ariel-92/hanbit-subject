@@ -30,18 +30,20 @@ export default function ProductDetailContentsTab({ productData }: ProductDetailC
           <Tab label="리뷰" />
         </Tabs>
       </AppBar>
-      <TabPanel value={currentTab} index={0}>
-        <ProductDetailDesc className="mt-4 mb-16" productDesc={productData.desc} />
-        <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
-        <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
-        <ProductDetailRefundPolicy />
-      </TabPanel>
-      <TabPanel value={currentTab} index={1}>
-        <ProductDetailPlaylist playlist={productData.playList} />
-      </TabPanel>
-      <TabPanel value={currentTab} index={2}>
-        <ProductDetailReview reviews={productData.reviews} />
-      </TabPanel>
+      <div className='mx-4'>
+        <TabPanel value={currentTab} index={0}>
+          <ProductDetailDesc className="mt-4 mb-16" productDesc={productData.desc} />
+          <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
+          <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
+          <ProductDetailRefundPolicy />
+        </TabPanel>
+        <TabPanel value={currentTab} index={1}>
+          <ProductDetailPlaylist playlist={productData.playList} />
+        </TabPanel>
+        <TabPanel value={currentTab} index={2}>
+          <ProductDetailReview reviews={productData.reviews} />
+        </TabPanel>
+      </div>
     </>
   )
 }
