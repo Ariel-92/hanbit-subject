@@ -74,7 +74,7 @@ export default function ProductDetailPage({ params }: ProductDetailProps) {
       {
         reviewNo: "2",
         reviewWriter: "리뷰어 2",
-        reviewContent: "리뷰 내용 12dsfiaK",
+        reviewContent: "리뷰 내용 12",
         reviewRate: 3,
         reviewDate: "2024-01-05",
       }

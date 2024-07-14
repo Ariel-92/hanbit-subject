@@ -5,6 +5,7 @@ import ProductDetailLecturerInfo from "@/components/product/product-detail/produ
 import ProductDetailPlaylist from "@/components/product/product-detail/product-detail-playlist"
 import ProductDetailRelatedContents from "@/components/product/product-detail/product-detail-related-contents"
 import ProductDetailReview from "@/components/product/product-detail/product-detail-review"
+import ProductDetailRefundPolicy from "@/components/product/product-detail/product-detail-refund-policy"
 
 interface ProductDetailProps {
   productData: ProductInfo
@@ -20,6 +21,7 @@ export default function ProductDetail({ productData }: ProductDetailProps) {
         <ProductDetailPlaylist playlist={productData.playList} />
         <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
         <ProductDetailReview reviews={productData.reviews} />
+        <ProductDetailRefundPolicy />
       </div>
     </>
   )
