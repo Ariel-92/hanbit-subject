@@ -4,8 +4,7 @@ import { TextareaAutosize } from "@mui/base"
 import H from "@/components/common/h"
 import P from "@/components/common/p"
 import { Button, Rating } from "@mui/material"
-import Image from "next/image"
-import { Star, StarRate, StarRateOutlined } from "@mui/icons-material"
+import { StarRate, StarRateOutlined } from "@mui/icons-material"
 
 interface ProductDetailReviewProps {
   reviews: Review[]
