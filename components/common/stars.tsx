@@ -1,4 +1,6 @@
 import Image from "next/image"
+import { StarRate, StarRateOutlined } from "@mui/icons-material"
+import { Rating } from "@mui/material"
 
 interface StarsProps {
   rate: number
@@ -6,23 +8,12 @@ interface StarsProps {
 
 export default function Stars({ rate }: StarsProps) {
   return (
-    <div className="flex">
-      {
-        Array.from({ length: 5 }, (_, index) => {
-          const isFilled = index < rate
-
-          if(isFilled) {
-            return (
-              <Image className="mr-1" src="/icons/icon_star.svg" alt={`별 ${index + 1}`} width={16} height={16} key={index} />
-            )
-          }
-          else {
-            return (
-              <Image className="mr-1" src="/icons/icon_star_line.svg" alt={`별 ${index + 1}`} width={16} height={16} key={index} />
-            )
-          }
-        })
-      }
-    </div>
+    <Rating
+      name="review-rating"
+      value={rate}
+      readOnly
+      icon={<StarRate />}
+      emptyIcon={<StarRateOutlined />}
+    />
   )
 }
