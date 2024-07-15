@@ -2,12 +2,12 @@
 
 ## Using Libraries
 
-React.js
-Next.js
-Typescript
-Tailwindcss
-MUI
-Material Icons
+React.js <br />
+Next.js <br />
+Typescript <br />
+Tailwindcss <br />
+MUI <br />
+Material Icons <br />
 
 ## Getting Started
 
