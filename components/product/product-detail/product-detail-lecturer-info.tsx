@@ -8,7 +8,7 @@ interface ProductDetailLecturerInfoProps {
 
 export default function ProductDetailLecturerInfo({ lecturerInfo }: ProductDetailLecturerInfoProps) {
   return (
-    <div className="w-full mb-5">
+    <div className="w-full mb-16">
       <H as="h2" className="mb-4">강사 소개</H>
       <div className="border rounded-2xl p-3 border-[#c6d0e9]">
         <div className="mb-7">

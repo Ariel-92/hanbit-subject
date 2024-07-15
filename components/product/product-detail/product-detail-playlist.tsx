@@ -10,7 +10,7 @@ interface ProductDetailPlaylistProps {
 export default function ProductDetailPlaylist({ playlist }: ProductDetailPlaylistProps) {
   return (
     <div>
-      <H as="h2" className="my-4">목차</H>
+      <H as="h2" className="mt-4 mb-9">목차</H>
       <div className="border rounded-lg border-[#c6d0e9]">
         <table className="w-full table-fixed">
           <tbody>
