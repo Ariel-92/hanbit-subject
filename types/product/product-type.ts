@@ -12,6 +12,7 @@ export type ProductInfo = {
   relatedContents: RelatedContents[]
   reviews: Review[]
   purchaseInfo: ProductPurchaseInfo
+  additionalInfo: ProductAdditionalInfo
 }
 
 export type LecturerInfo = {
@@ -57,6 +58,9 @@ export type ProductDescription = {
 export type ProductPurchaseInfo = {
   salePrice: number
   norPrice: number
+}
+
+export type ProductAdditionalInfo = {
   category: string
   author: string
   totalPlayTerm: number

@@ -1,13 +1,15 @@
 import { AppBar, Button, Card, CardActions, CardContent } from "@mui/material"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import H from "@/components/common/h"
-import { ProductPurchaseInfo } from "@/types/product/product-type"
+import { ProductAdditionalInfo, ProductPurchaseInfo } from "@/types/product/product-type"
+import ProductDetailAdditionalInfo from "@/components/product/product-detail/product-detail-additional-info"
 
 interface ProductPurchaseCardProps {
   purchaseInfo: ProductPurchaseInfo
+  additionalInfo: ProductAdditionalInfo
 }
 
-export default function ProductPurchaseCard({ purchaseInfo }: ProductPurchaseCardProps) {
+export default function ProductPurchaseCard({ purchaseInfo, additionalInfo }: ProductPurchaseCardProps) {
   return (
     <AppBar className="border-0 shadow-none" position="sticky" color="inherit">
       <Card className="border border-[#c6d0e9] mt-5 shadow-none sticky">
@@ -21,14 +23,7 @@ export default function ProductPurchaseCard({ purchaseInfo }: ProductPurchaseCar
           <Button className="w-full bg-accent text-white font-bold hover:bg-[#11C4B4]">바로 결제</Button>
         </CardActions>
         <CardContent>
-          <ul>
-            <li>카테고리 : {purchaseInfo.category}</li>
-            <li>강사명 : {purchaseInfo.author}</li>
-            <li>총 강의 수 : {purchaseInfo.totalPlayTerm}</li>
-            <li>총 강의 길이 : {purchaseInfo.totalPlayTime}</li>
-            <li>보관기간 : {purchaseInfo.storagePeriod}</li>
-            <li>수강 권장 기간 : {purchaseInfo.recommendPeriod}</li>
-          </ul>
+          <ProductDetailAdditionalInfo additionalInfo={additionalInfo} />
         </CardContent>
       </Card>
     </AppBar>

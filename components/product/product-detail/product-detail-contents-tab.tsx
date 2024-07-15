@@ -9,6 +9,7 @@ import ProductDetailRelatedContents from "@/components/product/product-detail/pr
 import ProductDetailReview from "@/components/product/product-detail/product-detail-review"
 import ProductDetailRefundPolicy from "@/components/product/product-detail/product-detail-refund-policy"
 import type { ProductInfo } from "@/types/product/product-type"
+import ProductDetailAdditionalInfo from "@/components/product/product-detail/product-detail-additional-info"
 
 interface ProductDetailContentsTabProps {
   productData: ProductInfo
@@ -33,6 +34,7 @@ export default function ProductDetailContentsTab({ productData, className }: Pro
       </AppBar>
       <div className='mx-4'>
         <TabPanel value={currentTab} index={0}>
+          <ProductDetailAdditionalInfo className="mt-4" additionalInfo={productData.additionalInfo} />
           <ProductDetailDesc className="mt-4 mb-16" productDesc={productData.desc} />
           <ProductDetailLecturerInfo lecturerInfo={productData.lecturer} />
           <ProductDetailRelatedContents relatedContents={productData.relatedContents} />
