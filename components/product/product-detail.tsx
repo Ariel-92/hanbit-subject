@@ -11,7 +11,7 @@ interface ProductDetailProps {
 export default function ProductDetail({ productData }: ProductDetailProps) {
   return (
     <>
-      <ProductDetailBasicInfo productNm={productData.productNm} tags={productData.tags} imgPath={productData.imgPath} />
+      <ProductDetailBasicInfo productNm={productData.productNm} tags={productData.tags} imgPath={productData.imgPath} avgRate={productData.avgRate}/>
       <div className="max-w-[1140px] mx-auto md:flex">
         <ProductDetailContentsTab className="w-full" productData={productData} />
         <div className="md:hidden w-full fixed bottom-0 left-0 right-0">

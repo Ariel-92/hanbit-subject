@@ -41,9 +41,7 @@ export default function ProductDetailPage({ params }: ProductDetailProps) {
         "개발자 스스로 챙겨야 하는 요구사항과 일처리 방식을 이해할 수 있습니다.\n" +
         "설계과정에서 기술부채를 최소화하고, 사업 변화에 유연하게 대처하는 방법을 배우게 됩니다.",
     },
-    norPrice: 10000,
-    salePrice: 8000,
-    saleRate: 20,
+    avgRate: 4.0,
     lecturer: {
       lecturerNm: "강사 1",
       desc: "강사 소개 \n강사 소개2",

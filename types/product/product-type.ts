@@ -4,9 +4,7 @@ export type ProductInfo = {
   tags: string[]
   imgPath: string
   desc: ProductDescription
-  norPrice: number
-  salePrice: number
-  saleRate: number
+  avgRate: number
   lecturer: LecturerInfo
   playList: PlayList[]
   relatedContents: RelatedContents[]
