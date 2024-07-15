@@ -13,7 +13,7 @@ export default function ProductDetail({ productData }: ProductDetailProps) {
     <>
       <ProductDetailBasicInfo productNm={productData.productNm} tags={productData.tags} imgPath={productData.imgPath} avgRate={productData.avgRate}/>
       <div className="max-w-[1140px] mx-auto md:flex">
-        <ProductDetailContentsTab className="w-full" productData={productData} />
+        <ProductDetailContentsTab className="w-full mb-40 md:mb-0" productData={productData} />
         <div className="md:hidden w-full fixed bottom-0 left-0 right-0">
           <ProductPurchaseBottomNav purchaseInfo={productData.purchaseInfo} />
         </div>
